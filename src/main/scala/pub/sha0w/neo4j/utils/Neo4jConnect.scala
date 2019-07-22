@@ -27,7 +27,7 @@ class Neo4jConnect(uri : String, user : String, passwd : String) extends AutoClo
   }
 }
 object Neo4jConnect {
-  val url = "bolt://124.16.144.22:7687"
+  val url = "bolt://*.*.*.*:7687"
   val user = "neo4j"
   val passwd = "bigdata"
   val startName = "Escherichia coli"
