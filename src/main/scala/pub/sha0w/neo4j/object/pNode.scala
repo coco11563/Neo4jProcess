@@ -1,6 +1,7 @@
 package pub.sha0w.neo4j.`object`
 
 import org.neo4j.driver.types.Node
+import pub.sha0w.neo4j.`object`.subclass.SubNode
 
 import scala.collection.mutable
 
@@ -48,7 +49,7 @@ object pNode {
       case "ProteinNode" => new ProteinNode(node)
       case "GeneNode" => new GeneNode(node)
       case "GenomeNode" => new GenomeNode(node)
-      case _ => throw new Exception("wrong cat type")
+      case _ => new SubNode(node, cat)
     }
   }
 }

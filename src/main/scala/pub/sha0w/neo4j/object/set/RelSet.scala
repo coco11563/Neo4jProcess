@@ -7,6 +7,7 @@ import scala.collection.mutable
 class RelSet {
   val rs : mutable.HashSet[Relation] = new mutable.HashSet[Relation]()
   override def toString: String = {
+    if (rs.isEmpty) return ""
     rs.map(p => {
       p.toString
     }).reduce(_ + "," + _)

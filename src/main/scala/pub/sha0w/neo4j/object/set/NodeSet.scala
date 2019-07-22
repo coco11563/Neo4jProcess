@@ -8,6 +8,7 @@ class NodeSet {
   val ns : mutable.HashSet[pNode] = new mutable.HashSet[pNode]()
   val categoriesSet : mutable.HashSet[String] = new mutable.HashSet[String]()
   override def toString: String = {
+    if (ns.isEmpty) return ""
     ns.map(p => {
       p.toString
     }).reduce(_ + "," + _)
